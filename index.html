@@ -1,36 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="HandheldFriendly" content="true">
-                <meta name="MobileOptimized" content="320">
-                <meta name="screen-orientation" content="portrait">
-                <meta name="x5-orientation" content="portrait">
-                <meta name="full-screen" content="yes">
-                <meta name="HandheldFriendly" content="true">
-                <meta name="browsermode" content="application">
-                <meta name="x5-page-mode" content="app">
-<meta http-equiv="Pragma" content="no-cache">
-                <meta http-equiv="Cache-Control" content="no-cache">
-                <meta http-equiv="Cache-control" content="no-cache">
-                <meta http-equiv="Expires" content="0">
+<meta charset="gb2312">
+<title>首页—Charles的个人博客</title>
+<meta name="keywords" content="个人博客,Charles的个人博客,Charles" />
+<meta name="description" content="Charles的个人博客。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/m.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyfader.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
 </head>
-  <title>Charles的博客</title>
-<h1 align="center">Charles的博客</h1>
-  
-  <hr />
-  
-<p style="font-size:30px;color:red">欢迎来到Charles的博客！</p>
-  <p>这里会有一些 <del>沙雕</del> <ins>实用</ins> 的代码。</p>
-<p> <a href="http://macharlesclub.github.io/HTML5/">
-  进入这里点击屏幕会有烟花</a> </p>
-<p> <a href="http://macharlesclub.github.io/hezi/">
-  无论如何，保持浪漫</a> </p>
-  <address>
-Written by <a href="mailto:ma-chales@outlook.com">Charles Ma</a>.<br> 
-</address>
-
+<body>
+<header>
+  <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="index.html">网站首页</a></li>
+      <li><a href="list.html">学无止境</a></li>
+      <li><a href="gbook.html">留言</a></li>
+      <li><a href="jiuban.html">回到旧版</a></li>
+    </ul>
+  </div>
+  <div class="topnav">
+    <nav>
+      <ul>
+      <li><a href="index.html">网站首页</a></li>
+      <li><a href="list.html">学无止境</a></li>
+      <li><a href="gbook.html">留言</a></li>
+      <li><a href="jiuban.html">回到旧版</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<article>
+  <div class="banner">
+    <div id="sucaihuo" class="fader"> <img class="slide" src="images/banner01.jpg"> <img class="slide" src="images/banner02.jpg"> <img class="slide" src="images/banner03.jpg">
+      <div class="fader_controls">
+        <div class="page prev" data-target="prev">&lsaquo;</div>
+        <div class="page next" data-target="next">&rsaquo;</div>
+        <ul class="pager_list">
+        </ul>
+      </div>
+    </div>
+    <script>
+$(function() {
+	$('#sucaihuo').easyFader();
+});
+</script> 
+  </div>
+  <div class="blog" >
+    <figure>
+      <ul>
+        <a href="yanhua.html"><img src="images/mb01.jpg"><span>点击进入精彩世界</span></a>
+      </ul>
+      <p><a href="yanhua.html">点击绽放烟花，视觉盛宴</a></p>
+      <figcaption>点击进入以后，点击屏幕绽放烟花，目前已经适配手机！欢迎欣赏。</figcaption>
+    </figure>
+    <figure>
+      <ul>
+        <a href="hezi.html"><img src="images/mb02.jpg"><span>点击进入精彩世界</span></a>
+      </ul>
+      <p><a href="hezi.html">无论如何，保持浪漫</a></p>
+      <figcaption>双重盒子式页面，配上精美的图片，是您欣赏，表白的绝佳选择，即将适配手机，敬请期待...</figcaption>
+    </figure>
+    <figure>
+      <ul>
+        <a href="404.html"><img src="images/mb03.jpg"><span>点击进入精彩世界</span></a>
+      </ul>
+      <p><a href="404.html">暂未开放</a></p>
+      <figcaption>让世界拥有它的脚步，让我保有我的茧。当溃烂已极的心灵再不想做一丝一毫的思索时，就让我静静回到我的茧内，以回忆为睡榻，以悲哀为覆被，这是我唯一的美丽。</figcaption>
+    </figure>
+    <figure>
+      <ul>
+        <a href="404.html"><img src="images/mb04.jpg"><span>点击进入精彩世界</span></a>
+      </ul>
+      <p><a href="404.html">暂未开放</a></p>
+      <figcaption>让世界拥有它的脚步，让我保有我的茧。当溃烂已极的心灵再不想做一丝一毫的思索时，就让我静静回到我的茧内，以回忆为睡榻，以悲哀为覆被，这是我唯一的美丽。</figcaption>
+    </figure>
+  </div>
+  <div class="newblogs">
+  <h2 class="hometitle">最新文章</h2>
+    <ul>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="404.html" title="暂未开放，敬请期待敬请期待"><img src="images/t01.jpg" alt="暂未开放，敬请期待" /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">CSS3|Html5</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b01.png"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>
+          <p>"暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><!--<span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>-->
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/t02.jpg"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div>
+        <div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="404.html" title="暂未开放，敬请期待"><img src="images/t01.jpg" alt="暂未开放，敬请期待" /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">CSS3|Html5</a></span><a href="404.html" target="_blank" >暂未开放，</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b01.png"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>
+          <p>"暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><!--<span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>-->
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/t02.jpg"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><!--<span class="blogpic"><a href="/" title=""><img src="images/b06.jpg"  /></a></span>-->
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/t02.jpg"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">个人博客</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="404.html" title="暂未开放,敬请期待"><img src="images/t01.jpg" alt="暂未开放，敬请期待" /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+      <li>
+        <h3 class="blogtitle"><span><a href="/jstt/css3/" title="css3" target="_blank"  class="classname">CSS3|Html5</a></span><a href="404.html" target="_blank" >暂未开放，敬请期待</a></h3>
+        <div class="bloginfo"><span class="blogpic"><a href="/" title=""><img src="images/b01.png"  /></a></span>
+          <p>暂未开放，敬请期待</p>
+        </div>
+        <div class="autor"><span class="lm f_l"></span><span class="dtime f_l">2020-5-8</span><span class="viewnum f_l">浏览（<a href="/">1429</a>）</span><span class="f_r"><a href="404.html" class="more">阅读原文>></a></span></div><div class="line"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="rbox">
+    <div class="paihang">
+      <h2 class="hometitle">心得分享</h2>
+      <ul>
+        <li><b><a href="404.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/t02.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-02-19/649.html" target="_blank"> 暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b03.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2013-08-08/571.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b04.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-09-18/730.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b05.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-04-17/661.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b06.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/jstt/bj/2015-01-09/740.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/mb02.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+      </ul>
+    </div>
+    <div class="paihang">
+      <h2 class="hometitle">站长推荐</h2>
+      <ul>
+        <li><b><a href="404.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/t02.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-02-19/649.html" target="_blank"> 暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b03.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2013-08-08/571.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b04.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-09-18/730.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b05.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/download/div/2014-04-17/661.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/b06.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+        <li><b><a href="/jstt/bj/2015-01-09/740.html" target="_blank">暂未开放，敬请期待</a></b>
+          <p><i><img src="images/mb02.jpg"  /></i>暂未开放，敬请期待</p>
+        </li>
+      </ul>
+    </div>
+    <div class="links">
+      <h2 class="hometitle">友情链接</h2>
+      <ul>
+        <li><a href="index.html">博 客 主 页</a></li>
+        <li><a href="jiuban.html">旧版博客主页</a></li>
+        <li><a href="https://lihai2333.github.io">优秀个人博客</a></li>
+      </ul>
+    </div>
+    <div class="weixin">
+      <h2 class="hometitle">联系方式</h2>
+      <ul>
+        <img src="images/wx.jpg">
+      </ul>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Powered by <a href="index.html">Charles 2020</a> 
+</footer>
 </body>
 </html>
