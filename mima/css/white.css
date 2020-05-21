@@ -1,0 +1,46 @@
+html, body {
+    background: #2e2d33;
+}
+
+#app {
+    background: #f5f5f5;
+}
+
+.title-box {
+    background: #697492;
+}
+
+.passwordBox, .lengthBox, .setting {
+    background: transparent;
+}
+
+.passwordBox {
+    background: #59a0e0 !important;
+}
+
+.lengthBox {
+    background: #71c25c !important;
+}
+
+.setting {
+    background: #5dc2bc !important;
+}
+
+.settings .setting input:checked + label::before {
+    background: #59a0e0;
+}
+
+.submit input {
+    background: #eca843;
+}
+
+.submit input:hover {
+    background: #ecb45f;
+}
+.box-skin .skin_white:hover {
+    background: rgba(255, 255, 255, 0.5) url("../images/1.png") no-repeat center;
+}
+
+.box-skin .skin_black:hover {
+    background: rgba(255, 255, 255, 0.5) url("../images/2.png") no-repeat center;
+}

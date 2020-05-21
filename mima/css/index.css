@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    color: #fff;
+}
+
+#app {
+    width: 600px;
+    padding: 0 25px 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+    transition: all 1s;
+}
+
+.passwordBox, .lengthBox, .setting {
+    position: relative;
+    width: 100%;
+    height: calc(65px - 10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    color: #fff;
+    margin-bottom: 8px;
+    transition: all 1s;
+}
+
+.title-box {
+    width: 100%;
+    height: 60px;
+    margin-left: -25px;
+    margin-bottom: 20px;
+    padding: 0 25px;
+    box-sizing: content-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+
+}
+
+.box-skin {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box-skin div {
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.box-skin div:hover {
+    background-size: 30px;
+}
+
+.box-skin .skin_white {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.box-skin .skin_black {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.title-box .box-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-box .title {
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.title-box .dot-box {
+    padding-top: 20px;
+}
+
+.title-box .dot-box span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.title-box .dot-box span:nth-child(1) {
+    background: #e54c3c;
+}
+
+.title-box .dot-box span:nth-child(2) {
+    background: #f0c41a;
+}
+
+.title-box .dot-box span:nth-child(3) {
+    background: #24ae60;
+}
+
+.passwordBox {
+    position: relative;
+}
+
+.passwordBox input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.passwordBox #copyInput {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lengthInfo {
+    color: #697492;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.lengthInfo span {
+    color: #697492;
+}
+
+.passwordBox input::-ms-input-placeholder {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.passwordBox input::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.passwordBox .clickCopy {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.passwordBox .clickCopy span {
+    vertical-align: middle;
+}
+
+.passwordBox:hover .clickCopy {
+    opacity: 0.6;
+}
+
+.lengthBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lengthBox span {
+    font-weight: bold;
+}
+
+.lengthBox input {
+    width: 80%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.settings .settingsBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.settings .settingsBox .setting {
+    width: 49%;
+}
+
+.settings-title {
+    color: #697492;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.settings .setting input {
+    display: none;
+}
+
+.settings .setting input + label::before {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background: #6d7082;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.settings .setting input + label::after {
+    position: absolute;
+    right: 35px;
+    bottom: 15px;
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: right 150ms;
+}
+
+.settings .setting input:checked + label::before {
+    background: #59a0e0;
+    border: 2px solid #fff;
+    transition: border 150ms;
+}
+
+.settings .setting input:checked + label::after {
+    right: 15px;
+}
+
+.submit {
+    width: 100%;
+    height: calc(65px - 10px);
+    background: rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+}
+
+.submit input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #eca843;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.submit input:hover {
+    background: #ecb45f;
+}
+
+@media screen and (max-width: 500px) {
+    #app {
+        width: 90%;
+    }
+
+    .settings .settingsBox {
+        width: 100%;
+        display: block;
+    }
+
+    .settings .settingsBox .setting {
+        width: 100%;
+    }
+}
+
+input[type="range"] {
+    width: 300px;
+    height: 10px;
+    border: 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+    -webkit-appearance: none !important;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5d68e2;
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-modify: read-write-plaintext-only;
+    color: #fff;
+}
+
+[v-cloak] {
+    display: none;
+}

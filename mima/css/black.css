@@ -1,0 +1,35 @@
+html, body {
+    background-image: linear-gradient(to top, #42b4e6 0%, #7353af 100%);
+}
+
+#app {
+    background: rgba(10, 14, 49, 0.9);
+}
+
+.title-box {
+    background: #12193f;
+}
+
+.passwordBox, .lengthBox, .setting {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.settings .setting input:checked + label::before {
+    background: #5d68e2;
+}
+
+.submit input {
+    background-image: linear-gradient(to right, #6876df 0%, #7452ad 100%);
+}
+
+.submit input:hover {
+    background-image: linear-gradient(to right, #727bdf 0%, #7b5ead 100%);
+}
+
+.box-skin .skin_white:hover {
+    background: rgba(0, 0, 0, 0.5) url("../images/1-1.png") no-repeat center;
+}
+
+.box-skin .skin_black:hover {
+    background: rgba(0, 0, 0, 0.5) url("../images/1-2.png") no-repeat center;
+}

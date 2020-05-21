@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script src="js/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--可以让部分国产浏览器默认采用高速模式渲染页面-->
+    <meta content="webkit" name="renderer">
+    <!--为了让 IE 浏览器运行最新的渲染模式下-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>密码生成器</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/white.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="title-box">
+        <div class="box-info">
+            <div class="dot-box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="title">密码生成器</h2>
+        </div>
+        <div class="box-skin">
+            <div @click="changeSkinBlack" class="skin_black"></div>
+            <div @click="changeSkinWhite" class="skin_white"></div>
+        </div>
+    </div>
+    <div @click="y_copy" class="passwordBox">
+        <input disabled placeholder="密码显示框" readonly="readonly" type="text" v-cloak v-model="y_password">
+        <input id="copyInput" placeholder="密码显示框" readonly="readonly" type="text" v-cloak v-model="y_password">
+        <p class="clickCopy" v-cloak>
+            {{y_copy_text}}
+            <span v-show="copy_svg_isShow === true">
+                <svg class="icon" height="15" p-id="1166" t="1587839156278"
+                     version="1.1" viewBox="0 0 1024 1024" width="15" xmlns="http://www.w3.org/2000/svg"><path
+                        d="M867.09 64.12H363.93A92.92 92.92 0 0 0 271 157v113.12H144a80 80 0 0 0-80 80v530a80 80 0 0 0 80 80h530a80 80 0 0 0 80-80v-126h113.09A92.92 92.92 0 0 0 960 661.2V157a92.92 92.92 0 0 0-92.91-92.88zM674 900.12H144a20 20 0 0 1-20-20v-530a20 20 0 0 1 20-20h530a20 20 0 0 1 20 20v530a20 20 0 0 1-20 20zM901 661.2a32.92 32.92 0 0 1-32.92 32.92H755v-344a80 80 0 0 0-80-80H331V157a32.92 32.92 0 0 1 32.92-32.92h504.17A32.92 32.92 0 0 1 901 157z"
+                        fill="#ffffff" p-id="1167"></path><path
+                        d="M542.38 495.12H277c-15.81 0-29.37 12-30.51 27.76a30 30 0 0 0 29.92 32.24h265.38c15.81 0 29.37-12 30.51-27.76a30 30 0 0 0-29.92-32.24zM542.38 675.12H277c-15.81 0-29.37 12-30.51 27.76a30 30 0 0 0 29.92 32.24h265.38c15.81 0 29.37-12 30.51-27.76a30 30 0 0 0-29.92-32.24z"
+                        fill="#ffffff" p-id="1168"></path></svg>
+            </span>
+            <span v-show="copy_svg_isShow === false">
+                <svg class="icon" height="15" p-id="1149" t="1587839318126"
+                     version="1.1" viewBox="0 0 1024 1024" width="15" xmlns="http://www.w3.org/2000/svg"><path
+                        d="M512 56.888889C261.688889 56.888889 56.888889 261.688889 56.888889 512s204.8 455.111111 455.111111 455.111111 455.111111-204.8 455.111111-455.111111-204.8-455.111111-455.111111-455.111111m0 853.333333c-221.866667 0-398.222222-176.355556-398.222222-398.222222s176.355556-398.222222 398.222222-398.222222 398.222222 176.355556 398.222222 398.222222-176.355556 398.222222-398.222222 398.222222"
+                        fill="#ffffff" p-id="1150"></path><path
+                        d="M320.910222 465.806222l201.159111 201.159111-40.220444 40.220445-201.159111-201.159111z"
+                        fill="#ffffff" p-id="1151"></path><path
+                        d="M725.504 380.188444l40.220444 40.220445-281.6 281.6-40.220444-40.220445z" fill="#ffffff"
+                        p-id="1152"></path></svg>
+            </span>
+        </p>
+    </div>
+    <p class="lengthInfo">长度: <strong v-cloak>{{y_length}}</strong></p>
+    <div class="lengthBox">
+        <span> 4 </span>
+        <input max="32" min="4" step="1" type="range" v-cloak v-model="y_length">
+        <span> 32 </span>
+    </div>
+    <div class="settings">
+        <p class="settings-title">Settings</p>
+        <div class="settingsBox">
+            <div class="setting">
+                <input :checked="y_case" @click="iSCase" id="uppercase" type="checkbox" v-cloak>
+                <label for="uppercase">包含大写</label>
+            </div>
+            <div class="setting">
+                <input :checked="y_lowCase" @click="iSLowCase" id="lowercase" type="checkbox" v-cloak>
+                <label for="lowercase">包含小写</label>
+            </div>
+            <div class="setting">
+                <input :checked="y_number" @click="iSNumber" id="number" type="checkbox" v-cloak>
+                <label for="number">包括数字</label>
+            </div>
+            <div class="setting">
+                <input :checked="y_symbol" @click="iSSymbol" id="symbol" type="checkbox" v-cloak>
+                <label for="symbol">包括符号</label>
+            </div>
+        </div>
+    </div>
+    <div @click="y_submit" class="submit">
+        <input type="submit" value="生成密码">
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>
